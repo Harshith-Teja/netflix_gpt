@@ -37,7 +37,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="absolute w-screen bg-gradient-to-b from-black z-10 flex justify-between mr-4">
+    <header className="w-full absolute top-0 left-0 flex justify-between bg-transparent z-10">
       <img src={LOGO} alt="logo" className="w-52" />
 
       {user && (
@@ -45,7 +45,7 @@ const Header = () => {
           <img className="w-16 h-16" src={PROFILE_PIC} alt="profile icon" />
           <button
             onClick={handleSignOut}
-            className="font-bold text-slate-700 mt-4"
+            className="font-bold text-slate-100 mt-4"
           >
             Sign out
           </button>
