@@ -43,13 +43,11 @@ const Login = () => {
       )
         .then((userCredential) => {
           const user = userCredential.user;
-          console.log(user);
         })
         .catch((err) => {
           const errorCode = err.code;
           const errorMessage = err.message;
 
-          console.log(errorCode + " - " + errorMessage);
           setErrMsg(errorCode + " - " + errorMessage);
         });
     }
@@ -87,14 +85,11 @@ const Login = () => {
             .catch((err) => {
               setErrMsg(err.code + " - " + err.message);
             });
-
-          console.log(user);
         })
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
 
-          console.log(errorCode + " - " + errorMessage);
           setErrMsg(errorCode + " - " + errorMessage);
         });
     }
