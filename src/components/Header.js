@@ -48,13 +48,16 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="w-full absolute px-8 py-2 flex justify-between bg-transparent z-10">
-      <img src={LOGO} alt="logo" className="w-52" />
+    <header className="w-full absolute px-8 py-2 flex flex-col md:flex-row justify-between bg-transparent z-10">
+      <img src={LOGO} alt="logo" className="w-52 mx-auto md:mx-0" />
 
       {user && (
-        <div className="flex gap-4 p-4">
+        <div className="flex gap-4 p-4 justify-center">
           {showGptSearch && (
-            <select className="h-16 rounded-lg p-2" onChange={handleLangChange}>
+            <select
+              className="h-10 md:h-16 rounded-lg p-2"
+              onChange={handleLangChange}
+            >
               {SUPPORTED_LANGUAGES.map((lang) => (
                 <option key={lang.identifier} value={lang.identifier}>
                   {lang.name}
@@ -64,16 +67,20 @@ const Header = () => {
           )}
 
           <button
-            className="h-16 px-4 bg-sky-500 text-slate-100 text-lg font-medium rounded-lg"
+            className="h-10 md:h-16 px-4 bg-sky-500 text-slate-100 text-lg font-medium rounded-lg"
             onClick={handleToggleGptSearch}
           >
             {showGptSearch ? "Home Page" : "GPT Search"}
           </button>
-          <div className="flex flex-col">
-            <img className="w-16 h-16" src={PROFILE_PIC} alt="profile icon" />
+          <div className="flex flex-col items-center">
+            <img
+              className="w-10 md:w-16 h-10 md:h-16"
+              src={PROFILE_PIC}
+              alt="profile icon"
+            />
             <button
               onClick={handleSignOut}
-              className="font-bold text-slate-100 mt-4"
+              className="font-bold text-sm text-slate-100 mt-4"
             >
               Sign out
             </button>

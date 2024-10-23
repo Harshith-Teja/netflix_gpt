@@ -5,7 +5,7 @@ const MovieCard = ({ imgPath }) => {
   if (!imgPath) return null;
 
   return (
-    <div className="w-48 h-72 flex-shrink-0">
+    <div className="w-36 md:w-48 h-52 md:h-72 flex-shrink-0">
       <img
         className="w-full h-full object-cover"
         src={IMAGE_BASE_URL + imgPath}
