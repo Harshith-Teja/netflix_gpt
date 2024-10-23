@@ -13,8 +13,7 @@ export const API_OPTIONS = {
   method: "GET",
   headers: {
     accept: "application/json",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5NDc4ZWFiYTAzOTcyYTM2MWJiNzk4NTNjMjI0YTBhMyIsIm5iZiI6MTcyOTQ5NjU5Ni41NTQ4ODgsInN1YiI6IjY3MTYwM2JkOTk0MzYzN2NlNTgyYTE1OSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.qqTZE5_u7FcKyrOQ4X4G1-5LIfgqmV2H6K4bbC3lcEY",
+    Authorization: "Bearer" + process.env.REACT_APP_TMDB_KEY,
   },
 };
 
@@ -28,5 +27,4 @@ export const SUPPORTED_LANGUAGES = [
 //export const OPEN_AI_API_KEY =
 //"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";
 
-export const OPEN_AI_API_KEY =
-  "sk-N54lCQdDQlDsEe8F0zvcBMnjDme3hfLTajQH1eAo4gT3BlbkFJ7R3wQ1iHS5xZTWrzU03r-k-4k4ESwrnkJsZgPkqm4A";
+export const OPEN_AI_API_KEY = process.env.REACT_APP_OPEN_AI_KEY;
